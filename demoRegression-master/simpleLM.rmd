@@ -53,6 +53,8 @@ plot(LENGTH~WEIGHT,data=bears)
 abline(simp)
 summary.lm(simp)
 ```
+   
+Compared to the first model of NECK and LENGTH, there is some similarities in the residual standard error and adjusted R-squared value. This means both model are about the same and WEIGHT did not give us a significant change to our values. 
 
 
 
