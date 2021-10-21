@@ -30,7 +30,29 @@ summary.lm(simp)
 ```{r}
 new <- data.frame(NECK=c(17,22,26))
 predict(simp,new)
-predict(simp,new,se.fit=TRUE)
+predict(simp,new,se.fit=TRUE, interval= "prediction")
 ```
 ## Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).
+
+
+
+```{r}
+simp <- lm(LENGTH~CHEST,data=bears)
+plot(LENGTH~CHEST,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+In this plot we can see that the Multiple R squared is bigger in this plot and our adjusted R squared is also slightly bigger by about 0.04. Our residual standard error is 4.9 in this model which is smaller than the plot above which was about 5.3. From this we can say that model 2 is the better model. 
+
+
+
+```{r}
+simp <- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+
 
