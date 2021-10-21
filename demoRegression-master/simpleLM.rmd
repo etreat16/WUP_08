@@ -58,3 +58,12 @@ Compared to the first model of NECK and LENGTH, there is some similarities in th
 
 
 
+```{r}
+simp <- lm(LENGTH~HEADLEN,data=bears)
+plot(LENGTH~HEADLEN,data=bears)
+abline(simp)
+summary.lm(simp)
+```
+
+  
+This model seems to be much better than the previous ones because the residual standard error is smaller and the adjusted R-squared is higher, therefore this is better.  
